@@ -286,7 +286,7 @@ app = Dash(
     external_stylesheets=[dbc.themes.FLATLY, dbc.icons.FONT_AWESOME],
     title="Pokédex Analytics — Python Dash",
 )
-
+server = app.server
 # CSS embarqué pour un fichier unique autonome (sans dossier assets/)
 app.index_string = """
 <!DOCTYPE html>
@@ -993,4 +993,4 @@ def mettre_a_jour_duel(data, nom_p1, nom_p2):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=8050)
